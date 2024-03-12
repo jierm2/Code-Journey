@@ -6,6 +6,7 @@ import ForgotPassword from './scenes/forgotpassword';
 import Homepage from './scenes/homepage';
 import Navbar from './scenes/navbar';
 import Sandbox from './scenes/sandbox';
+import HelloWorld from './scenes/hello-world';
 function App() {
   return (
     <>
@@ -18,6 +19,7 @@ function App() {
           <Route path="/signup" element={<Signup/>} />
           <Route path="/sandbox" element={<Sandbox/>} />
           <Route path="/forgot-password" element={<ForgotPassword/>} />
+          <Route path="/hello-world" element={<HelloWorld/>} />
 
       </Routes>
     </>
