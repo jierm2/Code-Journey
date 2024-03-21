@@ -6,6 +6,7 @@ import ForgotPassword from './scenes/forgotpassword';
 import Homepage from './scenes/homepage';
 import Navbar from './scenes/navbar';
 import Sandbox from './scenes/sandbox';
+import MapPage from './scenes/map/map';
 function App() {
   return (
     <>
@@ -14,10 +15,13 @@ function App() {
       <Routes>
       <Route path="/" element={<Homepage/>} />
 
+
+          <Route path="/map" element={<MapPage/>} />
           <Route path="/login" element={<SignIn/>} />
           <Route path="/signup" element={<Signup/>} />
           <Route path="/sandbox" element={<Sandbox/>} />
           <Route path="/forgot-password" element={<ForgotPassword/>} />
+          
 
       </Routes>
     </>
