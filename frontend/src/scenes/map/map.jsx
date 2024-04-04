@@ -1,15 +1,16 @@
 import React from 'react';
 import './MapPage.css'; 
+import { Link } from 'react-router-dom'; 
 
 const MapPage = () => {
   const lessons = [
-    { id: 'chapter0', top: '10%', left: '10%' },
-    { id: 'chapter1', top: '20%', left: '30%' },
-    { id: 'chapter2', top: '40%', left: '15%' },
-    { id: 'chapter3', top: '49%', left: '37%' },
-    { id: 'chapter4', top: '55%', left: '55%' },
-    { id: 'chapter5', top: '70%', left: '37%' },
-    { id: 'chapter6', top: '78%', left: '65%' },
+    { id: 'chapter 0', top: '10%', left: '10%', path: '/hello-world',  tooltip: 'Chapter 1: Introduction' },
+    { id: 'chapter 1', top: '20%', left: '30%', path: '/hello-world',  tooltip: 'Chapter 2: Introduction'},
+    { id: 'chapter 2', top: '40%', left: '15%', path: '/hello-world',  tooltip: 'Chapter 3: Introduction' },
+    { id: 'chapter 3', top: '49%', left: '37%', path: '/hello-world',  tooltip: 'Chapter 4: Introduction' },
+    { id: 'chapter 4', top: '55%', left: '55%', path: '/hello-world',  tooltip: 'Chapter 5: Introduction' },
+    { id: 'chapter 5', top: '70%', left: '37%', path: '/hello-world',  tooltip: 'Chapter 6: Introduction' },
+    { id: 'chapter 6', top: '78%', left: '65%', path: '/hello-world',  tooltip: 'Chapter 7: Introduction' },
   ];
 
   return (
@@ -26,15 +27,19 @@ const MapPage = () => {
         <line x1="42%" y1="75%" x2="70%" y2="83%" stroke="red" strokeDasharray="2" strokeWidth="0.5" />
      </svg>
 
+
       {lessons.map((lesson) => (
-        <img
-          key={lesson.id}
-          src="skull.png" 
-          alt={lesson.id}
-          className="skull-node"
-          style={{ top: lesson.top, left: lesson.left }}
-        />
+        <Link key={lesson.id} to={lesson.path} className="skull-node" style={{ top: lesson.top, left: lesson.left }}>
+        <img src="skull.png" alt={lesson.id} />
+        <div className="skull-tooltip">{lesson.tooltip}</div>
+        </Link>
       ))}
+
+    <h1 class="text-pirate text-black font-bold mb-8">
+        <a>
+            Start Your Journey Here
+        </a>
+    </h1>
     </div>
   );
 };
