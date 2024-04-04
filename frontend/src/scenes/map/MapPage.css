@@ -1,5 +1,4 @@
 .bg-treasure-map {
-/* This assumes that treasuremap.png is located in the public directory */
 background-image: url('/public/treasuremap.png');
 background-size: cover;
 background-position: center;
@@ -12,7 +11,6 @@ transition: transform 0.3s ease;
 }
 
 .interactive-image:hover {
-/* Highlight effect, such as a slight increase in size or change in opacity */
 transform: scale(1.05);
 opacity: 0.8;
 }
@@ -29,7 +27,7 @@ opacity: 0.8;
   
   .skull-node {
     position: absolute;
-    width: 10%; /* Adjust the size of the skulls here */
+    width: 10%;
     cursor: pointer;
     transition: transform 0.3s ease;
   }
@@ -46,8 +44,40 @@ opacity: 0.8;
     top: 0;
     left: 0;
   }
+
+  @font-face {
+    font-family: 'TheRumIsGone';
+    src: url('/public/pirate-font.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.text-pirate {
+    font-family: 'TheRumIsGone', sans-serif;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.skull-tooltip {
+  position: absolute;
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 7px 15px;
+  border-radius: 6px;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+
+.skull-node:hover .skull-tooltip {
+  visibility: visible;
+}
+
   
-  /* Ensure your SVG lines have correct coordinates matching your skulls' positions */
   
 
   
