@@ -1,4 +1,4 @@
-import './App.css';
+import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import SignIn from './scenes/signin';
 import Signup from './scenes/signup';
@@ -17,6 +17,7 @@ import PublicRoute from './utils/PublicRoute';
 import PrivateRoute from './utils/PrivateRoute';
 function App() {
   return (
+
     <Provider store={store}>
             <Layout>
 
@@ -29,6 +30,12 @@ function App() {
           <Route path="/forgot-password" element={<PublicRoute><ForgotPassword/></PublicRoute>} />
           <Route path="/hello-world" element={<HelloWorld/>} />
 
+        <Route path="/map" element={<MapPage />} />
+        <Route path="/login" element={<SignIn />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/sandbox" element={<Sandbox />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/hello-world" element={<HelloWorld />} />
       </Routes>
       </Layout>
 

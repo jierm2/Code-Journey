@@ -17,9 +17,9 @@ opacity: 0.8;
 
 .map-container {
     position: relative;
-    width: 1800px; 
-    height: 1000px; 
-    background-image: url('/public/treasuremap.png'); 
+    width: 100%; /* Full width of the container */
+    height: 93vh; /* Or adjust to the height of your map */
+    background-image: url('/public/treasuremap.png'); /* Make sure this URL is correct */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
