@@ -1,0 +1,10 @@
+.defaultClass {
+  width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid black;
+  height: 60px;
+  background-color: aliceblue;
+  z-index: 1000;
+  padding: 0;
+}

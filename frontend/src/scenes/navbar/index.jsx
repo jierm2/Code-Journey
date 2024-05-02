@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { logout } from '../../actions/auth';
+import AvatarBox from '../avatar/avatar';
 
 const Navbar = ({ logout, isAuthenticated }) => {
     const [redirect, setRedirect] = useState(false);
@@ -18,8 +19,6 @@ const Navbar = ({ logout, isAuthenticated }) => {
 
     const guestLinks = (
         <Fragment>
-            <Link className='nav-link' to='/login'>Login</Link>
-            <Link className='nav-link' to='/signup'>Sign Up</Link>
         </Fragment>
     );
 
@@ -42,7 +41,9 @@ const Navbar = ({ logout, isAuthenticated }) => {
                     </svg>
                 </button>
                 <div className={`${isExpanded ? 'block' : 'hidden'} w-full md:block md:w-auto`} id="navbar-default">
-                    <ul className="font-medium flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:p-0 md:bg-white dark:bg-gray-800">
+                    <ul className="font-medium flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:p-0 md:bg-white dark:bg-gray-800 ">
+                        
+                        
                         <li>
                             <Link to="/" className="block py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white">Home</Link>
                         </li>
@@ -52,10 +53,20 @@ const Navbar = ({ logout, isAuthenticated }) => {
                         <li>
                             <Link to="/map" className="block py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white">Map</Link>
                         </li>
+                        <li>
+                            <Link to='/login' className="block py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white">Login</Link>
+                        </li>
+                        <li>
+                            <Link to='/signup' className="block py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white">Sign Up</Link>
+                        </li>
                         {isAuthenticated ? authLinks : guestLinks}
                     </ul>
+                
+                    
                 </div>
+                <Link to="/personal"><AvatarBox ></AvatarBox></Link>
             </div>
+           
         </nav>
     );
 };
