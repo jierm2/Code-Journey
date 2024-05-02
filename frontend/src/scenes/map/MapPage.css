@@ -78,6 +78,25 @@ opacity: 0.8;
 }
 
   
-  
+.avatar-display {
+  position: relative;
+  width: 200px; /* Set the width based on your image size */
+  height: 300px; /* Set the height based on your image size */
+}
+
+.avatar-part {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Additional styling to ensure the hat appears above the character */
+.character {
+  z-index: 1;
+}
+
+.hat {
+  z-index: 2;
+}
 
   

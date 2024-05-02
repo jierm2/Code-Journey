@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './MapPage.css'; 
 import { Link } from 'react-router-dom'; 
+import AvatarBox from '../avatar/avatar.jsx';
+
 
 const MapPage = () => {
   const lessons = [
@@ -15,6 +17,7 @@ const MapPage = () => {
 
   return (
     <div className="map-container">
+     
      <svg className="map-lines" viewBox="0 0 100 100" preserveAspectRatio="none">
 
         <line x1="15%" y1="15%" x2="35%" y2="25%" stroke="red" strokeDasharray="2" strokeWidth="0.5" />
@@ -36,9 +39,12 @@ const MapPage = () => {
       ))}
 
     <h1 class="text-pirate text-black font-bold mb-8">
+        
         <a>
             Start Your Journey Here
         </a>
+        
+        
     </h1>
     </div>
   );

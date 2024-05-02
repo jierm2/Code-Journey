@@ -11,6 +11,7 @@ import HelloWorld from './scenes/hello-world';
 import Layout from './hocs/Layout';
 import { Provider } from 'react-redux';
 import store from './store';
+import Personal from './scenes/personal/personal';
 
 //To-do
 import PublicRoute from './utils/PublicRoute';
@@ -29,6 +30,8 @@ function App() {
           <Route path="/sandbox" element={<Sandbox/>} />
           <Route path="/forgot-password" element={<PublicRoute><ForgotPassword/></PublicRoute>} />
           <Route path="/hello-world" element={<HelloWorld/>} />
+          <Route path="/personal" element={<Personal/>} />
+
 
         <Route path="/map" element={<MapPage />} />
         <Route path="/login" element={<SignIn />} />
