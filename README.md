@@ -47,4 +47,4 @@ Arvind: Worked on the frontend, particularly the Python shell
 
 Jimmy:
 
-Rajas:
+Rajas: Worked on the frontend, particularly the home pages and styling
