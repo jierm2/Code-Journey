@@ -32,6 +32,8 @@ python3 manage.py runserver
 ```
 
 To set up the frontend:
+
+Create a file `.env` in `frontend` with `REACT_APP_API_URL = 'http://localhost:8000`. Then run the following:
 ```
 cd frontend
 npm install
