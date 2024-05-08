@@ -43,7 +43,7 @@ npm start
 
 ## Group members
 
-Arnold:
+Arnold: Worked on the frontend, working on creating pages, avatar creation, and map creation.
 
 Arvind: Worked on the frontend, particularly the Python shell
 
