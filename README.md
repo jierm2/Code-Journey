@@ -47,6 +47,6 @@ Arnold: Worked on the frontend, working on creating pages, avatar creation, and 
 
 Arvind: Worked on the frontend, particularly the Python shell
 
-Jimmy:
+Jimmy:  Worked on the frontend, particularly on the login page, signup page, forget password page, and the draft of the home page. Also worked on the backend mainly on authentication
 
 Rajas: Worked on the frontend, particularly the home pages and styling
